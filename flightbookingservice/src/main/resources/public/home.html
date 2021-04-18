@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Flight Ticket Booking</title>
+<link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="/style.css" rel="stylesheet">
+<script src="/webjars/jquery/jquery.min.js"></script>
+<script src="/webjars/sockjs-client/sockjs.min.js"></script>
+<script src="/webjars/stomp-websocket/stomp.min.js"></script>
+<script src="/app.js"></script>
+</head>
+
+<body onload="connect()">
+	<div id="main-content" class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<form>
+					<div class="citydivid">
+						<label for="scity">Source City:</label><br> <input
+							type="text" id="scity" name="scity" placeholder="Source City"><br>
+					</div>
+					<div class="citydivid">
+						<label for="dcity">Destination City:</label><br> <input
+							type="text" id="dcity" name="dcity"
+							placeholder="Destination City"><br>
+					</div>
+					<br> <input type="button" value="Search Flights"
+						onclick="searchFlights()">
+				</form>
+			</div>
+		</div>
+
+		<div>
+			<div id="flightsheading"></div>
+			<div id="flights"></div>
+		</div>
+
+	</div>
+</body>
+</html>
